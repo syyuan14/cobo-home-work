@@ -1,0 +1,187 @@
+.container {
+  width: 280px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-background-secondary);
+  border-right: 1px solid var(--color-border);
+  overflow: hidden;
+}
+
+.header {
+  padding: var(--spacing-lg);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.title {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-primary);
+  margin: 0;
+}
+
+.actions {
+  display: flex;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-md);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.newConversationButton {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  padding: var(--spacing-sm) var(--spacing-md);
+  background-color: var(--color-primary);
+  color: white;
+  border: none;
+  border-radius: var(--border-radius-md);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  cursor: pointer;
+  transition: all var(--transition-normal);
+
+  &:hover {
+    background-color: var(--color-primary-hover);
+    transform: translateY(-1px);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+
+  .icon {
+    font-size: var(--font-size-md);
+    font-weight: var(--font-weight-bold);
+  }
+}
+
+.clearButton {
+  padding: var(--spacing-sm);
+  background-color: transparent;
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-md);
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  transition: all var(--transition-normal);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:hover {
+    background-color: var(--color-error);
+    color: white;
+    border-color: var(--color-error);
+  }
+
+  .icon {
+    font-size: var(--font-size-sm);
+  }
+}
+
+.conversationList {
+  flex: 1;
+  overflow-y: auto;
+  padding: var(--spacing-sm);
+}
+
+.emptyState {
+  text-align: center;
+  padding: var(--spacing-xl);
+  color: var(--color-text-tertiary);
+}
+
+.emptyStateHint {
+  font-size: var(--font-size-xs);
+  margin-top: var(--spacing-xs);
+  opacity: 0.8;
+}
+
+.conversationItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--spacing-md);
+  margin-bottom: var(--spacing-xs);
+  background-color: var(--color-background);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-md);
+  cursor: pointer;
+  transition: all var(--transition-normal);
+  position: relative;
+
+  &:hover {
+    border-color: var(--color-primary);
+    background-color: var(--color-background-tertiary);
+  }
+
+  &.active {
+    border-color: var(--color-primary);
+    background-color: var(--color-primary);
+    color: white;
+  }
+}
+
+.conversationInfo {
+  flex: 1;
+  min-width: 0;
+  margin-right: var(--spacing-md);
+}
+
+.conversationTitle {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-primary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: var(--spacing-xs);
+
+  .conversationItem.active & {
+    color: white;
+  }
+}
+
+.conversationMeta {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.conversationTime {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-tertiary);
+
+  .conversationItem.active & {
+    color: rgba(255, 255, 255, 0.8);
+  }
+}
+
+.deleteButton {
+  position: absolute;
+  top: var(--spacing-xs);
+  right: var(--spacing-xs);
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  color: var(--color-text-tertiary);
+  font-size: var(--font-size-lg);
+  cursor: pointer;
+  border-radius: var(--border-radius-full);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-normal);
+
+  .conversationItem:hover & {
+    display: flex;
+  }
+
+  &:hover {
+    background-color: var(--color-error);
+    color: white;
+  }
+}

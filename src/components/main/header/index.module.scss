@@ -1,0 +1,27 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18.5px var(--spacing-lg);
+  background-color: var(--color-background);
+  border-bottom: 1px solid var(--color-border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  dark-mode & {
+    background-color: var(--color-background-secondary);
+    border-bottom-color: var(--color-border-dark);
+  }
+}
+
+.leftSection {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+}
+
+.rightSection {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+}

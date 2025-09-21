@@ -1,0 +1,13 @@
+.mainContent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.chatContainer {
+  display: flex;
+  flex-direction: column;
+  height: calc(100% - 76px);
+  width: 100%;
+}

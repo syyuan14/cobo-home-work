@@ -1,0 +1,10 @@
+@use './styles/variables.scss';
+
+/* 主容器样式 */
+.container {
+  display: flex;
+  height: 100vh;
+  background-color: var(--color-background);
+
+  overflow: hidden;
+}

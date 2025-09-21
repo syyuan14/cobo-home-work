@@ -1,0 +1,131 @@
+.container {
+  display: flex;
+  margin-bottom: var(--spacing-lg);
+  align-items: flex-start;
+}
+
+.containerUser {
+  flex-direction: row-reverse;
+}
+
+.avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: var(--color-background-tertiary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--font-size-md);
+  margin: 0 var(--spacing-md);
+  flex-shrink: 0;
+}
+
+.contentContainer {
+  display: flex;
+  flex-direction: column;
+  max-width: 70%;
+}
+
+.messageBubble {
+  padding: var(--spacing-md);
+  border-radius: var(--border-radius-lg);
+  word-wrap: break-word;
+  box-shadow: var(--shadow-sm);
+}
+
+.messageBubbleUser {
+  background-color: var(--color-user-message);
+  color: var(--color-user-message-text);
+  border-bottom-right-radius: 4px;
+  dark-mode & {
+    filter: brightness(1.1);
+  }
+}
+
+.messageBubbleAI {
+  background-color: var(--color-background);
+  color: var(--color-text-primary);
+  border-bottom-left-radius: 4px;
+  dark-mode & {
+    background-color: var(--color-background-secondary);
+  }
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  margin-top: var(--spacing-xs);
+  font-size: var(--font-size-xs);
+  color: var(--color-text-tertiary);
+}
+
+.containerUser .footer {
+  justify-content: flex-end;
+}
+
+.time {
+  opacity: 0.7;
+}
+
+.modelName {
+  background-color: var(--color-background-tertiary);
+  padding: 2px 6px;
+  border-radius: var(--border-radius-full);
+  font-size: var(--font-size-xs);
+  dark-mode & {
+    background-color: var(--color-border);
+  }
+}
+
+/* 适配深色主题下的消息气泡文本颜色 */
+.dark .messageBubbleUser {
+  color: white;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .contentContainer {
+    max-width: 85%;
+  }
+}
+
+/* 消息气泡内的Markdown样式适配 */
+.messageBubble :global(.markdown) {
+  color: inherit;
+}
+
+/* 重试按钮样式 */
+.retryButton {
+  background: transparent;
+  border: 1px solid var(--color-border);
+  color: var(--color-text-secondary);
+  padding: 2px 8px;
+  border-radius: var(--border-radius-md);
+  font-size: var(--font-size-xs);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.retryButton:hover {
+  background-color: var(--color-background-tertiary);
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+.retryButton:active {
+  transform: scale(0.95);
+}
+
+.messageBubbleUser :global(.markdown a) {
+  color: white;
+  text-decoration: underline;
+}
+
+.messageBubbleUser :global(.markdown code) {
+  background-color: rgba(255, 255, 255, 0.2);
+}

@@ -1,0 +1,136 @@
+// 主题变量 - 浅色主题
+:root {
+  // 主色调
+  --color-primary: #1677ff;
+  --color-primary-hover: #4096ff;
+  --color-primary-active: #0958d9;
+  --color-primary-disabled: #a0cfff;
+
+  // 次要颜色
+  --color-secondary: #8c8c8c;
+  --color-success: #52c41a;
+  --color-warning: #faad14;
+  --color-error: #f5222d;
+
+  // 背景颜色
+  --color-background: #ffffff;
+  --color-background-secondary: #f5f5f5;
+  --color-background-tertiary: #f0f0f0;
+
+  // 文本颜色
+  --color-text-primary: #262626;
+  --color-text-secondary: #595959;
+  --color-text-tertiary: #8c8c8c;
+  --color-text-disabled: #bfbfbf;
+
+  // 边框颜色
+  --color-border: #d9d9d9;
+  --color-border-light: #f0f0f0;
+  --color-border-dark: #434343;
+
+  // 用户消息气泡背景
+  --color-user-message: #1677ff;
+  --color-user-message-text: #ffffff;
+
+  // AI消息气泡背景
+  --color-ai-message: #f5f5f5;
+  --color-ai-message-text: #262626;
+}
+
+// 主题变量 - 深色主题
+
+[data-theme='dark'] {
+  // 主色调
+  --color-primary: #4096ff;
+  --color-primary-hover: #69b1ff;
+  --color-primary-active: #0958d9;
+  --color-primary-disabled: #292929;
+
+  // 次要颜色
+  --color-secondary: #8c8c8c;
+  --color-success: #52c41a;
+  --color-warning: #faad14;
+  --color-error: #f5222d;
+
+  // 背景颜色
+  --color-background: #141414;
+  --color-background-secondary: #1f1f1f;
+  --color-background-tertiary: #292929;
+
+  // 文本颜色
+  --color-text-primary: #ffffff;
+  --color-text-secondary: #bfbfbf;
+  --color-text-tertiary: #8c8c8c;
+  --color-text-disabled: #595959;
+
+  // 边框颜色
+  --color-border: #292929;
+  --color-border-light: #383838;
+  --color-border-dark: #434343;
+
+  // 用户消息气泡背景
+  --color-user-message: #1677ff;
+  --color-user-message-text: #ffffff;
+
+  // AI消息气泡背景
+  --color-ai-message: #292929;
+  --color-ai-message-text: #ffffff;
+}
+
+// 尺寸变量
+:root {
+  // 边框圆角
+  --border-radius-sm: 4px;
+  --border-radius-md: 8px;
+  --border-radius-lg: 12px;
+  --border-radius-xl: 16px;
+  --border-radius-full: 50%;
+
+  // 间距
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+  --spacing-2xl: 48px;
+
+  // 高度
+  --height-sm: 28px;
+  --height-md: 32px;
+  --height-lg: 40px;
+  --height-xl: 48px;
+
+  // 宽度
+  --width-sidebar: 280px;
+  --width-config-panel: 320px;
+}
+
+// 字体变量
+:root {
+  --font-family:
+    -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB',
+    'Microsoft YaHei', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --font-size-xs: 12px;
+  --font-size-sm: 14px;
+  --font-size-md: 16px;
+  --font-size-lg: 18px;
+  --font-size-xl: 20px;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 600;
+}
+
+// 阴影变量
+:root {
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+// 过渡变量
+:root {
+  --transition-fast: 0.15s ease;
+  --transition-normal: 0.2s ease;
+  --transition-slow: 0.3s ease;
+}

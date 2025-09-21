@@ -1,0 +1,38 @@
+.configButton {
+  padding: var(--spacing-sm);
+  background-color: transparent;
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-md);
+  cursor: pointer;
+  transition: all var(--transition-normal);
+  font-size: var(--font-size-md);
+
+  &:hover {
+    background-color: var(--color-background-tertiary);
+    border-color: var(--color-border-hover);
+  }
+}
+
+// 配置面板样式
+.configPanelOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  animation: fadeIn var(--transition-fast);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
