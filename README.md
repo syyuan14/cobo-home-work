@@ -63,8 +63,25 @@ pnpm run dev:both
 pnpm run server  # 启动后端服务
 pnpm run client     # 启动前端服务
 ```
+前端服务将在 http://localhost:5173 启动，后端mock服务将在 http://localhost:3001 启动。
 
-前端服务将在 http://localhost:5173 启动，后端服务将在 http://localhost:3001 启动。
+### 示例
+
+#### Markdown 支持
+AI 回复中的 Markdown 渲染效果：
+![Markdown 支持示例](/assets/markdown.png)
+
+#### 代码语法高亮
+展示代码块的语法高亮功能：
+![代码语法高亮示例](/assets/code.png)
+
+#### 深色模式
+应用的深色主题界面：
+![深色模式示例](/assets/dark.png)
+
+
+
+
 
 ## 项目结构
 
